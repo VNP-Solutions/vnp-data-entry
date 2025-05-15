@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNP VCC Charge System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <div class="logo-container">
+                    <img src="https://www.vnpsolutions.com/img/VNP-logo.svg" alt="VNP Logo" class="logo">
+                </div>
+                <h1 class="title">VNP VCC Charge System</h1>
+            </div>
+            <div class="welcome-user">
+                Welcome, <span id="user-name">Emile Sawaya</span>
+                <div class="user-avatar" id="userAvatar">ES</div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="navigation">
+            <div class="entry-counter">Entry 2/300</div>
+            <div class="nav-buttons">
+                <button class="nav-btn download" id="downloadBtn">
+                    <i class="fas fa-download"></i> Download Sheet
+                </button>
+                <button class="nav-btn prev">
+                    <i class="fas fa-chevron-left"></i> Prev
+                </button>
+                <button class="nav-btn next">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="nav-btn done" id="doneBtn">
+                    Done
+                </button>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="info-section">
+                <div class="info-card">
+                    <div class="info-row">
+                        <div class="info-label">Expedia ID:</div>
+                        <div class="info-value">16700171 <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Batch:</div>
+                        <div class="info-value">16700171 <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Posting Type:</div>
+                        <div class="info-value">OTA Post <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Portfolio:</div>
+                        <div class="info-value">Chartwell Hospitality <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Hotel Name:</div>
+                        <div class="info-value">Black Fox Lodge Pigeon Forge<i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Hotel Confirmation:</div>
+                        <div class="info-value">3176067698 <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Middle Column -->
+            <div class="info-section">
+                <div class="info-card">
+                    
+                    <div class="info-row">
+                        <div class="info-label">Name:</div>
+                        <div class="info-value">Bruce Wayne <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Check In:</div>
+                        <div class="info-value">11/23/2024 <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Check Out:</div>
+                        <div class="info-value">12/23/2024 <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Currency:</div>
+                        <div class="info-value">USD <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Amount to charge:</div>
+                        <div class="info-value">$281.47 <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Charge Status:</div>
+                        <div class="info-value"><span class="highlight">Ready to charge</span> <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="info-section">
+                <div class="info-card">
+                    
+                    <div class="info-row">
+                        <div class="info-label">BT Maid:</div>
+                        <div class="info-value">XXXXXX MAID <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Card first 4:</div>
+                        <div class="info-value">5567 <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Card last 12:</div>
+                        <div class="info-value">170839894181 <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    
+                    <div class="info-row">
+                        <div class="info-label">Card Expire:</div>
+                        <div class="info-value">11/2027 <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Card CVV:</div>
+                        <div class="info-value">457 <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Status Section -->
+            <div class="status-section">
+                <div class="status-card">
+                    <div class="status-header">Status</div>
+                    <div class="info-row">
+                        <div class="info-label status-label">Current Status</div>
+                        <div class="info-value status-value"> <i class="fas fa-copy copy-icon"></i></div>
+                    </div>
+                    <select class="status-dropdown">
+                        <option value="">Select status...</option>
+                        <option value="Charge Successful">Charge Successful</option>
+                        <option value="Charge Failed">Charge Failed</option>
+                        <option value="Error">Error</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Card View Section -->
+        <div class="card-view-section">
+            <!-- <div class="section-title">Card View</div> -->
+            <div class="credit-card">
+                <div class="card-brand">VCC</div>
+                <div class="card-number">5567 5567 5567 5567</div>
+                <div class="card-details">
+                    <div>
+                        <div class="card-holder">CARD HOLDER</div>
+                        <div class="card-holder-name">Bruce Wayne</div>
+                        <div class="card-amount">$281.47</div>
+                    </div>
+                    <div>
+                        <div class="card-expires">EXPIRES</div>
+                        <div class="card-expires-date">11/2027</div>
+                    </div>
+                </div>
+                <div class="card-chip">
+                    <svg width="50" height="40" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="48" height="38" rx="4" stroke="#F0C14B" stroke-width="2"/>
+                        <rect x="10" y="10" width="30" height="20" rx="2" stroke="#F0C14B" stroke-width="2"/>
+                        <line x1="10" y1="20" x2="40" y2="20" stroke="#F0C14B" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

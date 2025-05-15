@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNP VCC Charge System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://www.vnpsolutions.com/img/VNP-logo.svg" alt="VNP Logo" class="logo">
+            </div>
+            <h1 class="title">VNP VCC Charge System</h1>
+        </div>
+        
+        <div class="form-container">
+            <div class="form-group">
+                <label class="form-label">Enter VNP Work ID</label>
+                <input type="text" id="vnpWorkId" class="form-input" placeholder="VNP Work ID assigned to you">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Select your current work file</label>
+                <input type="file" id="fileInput" class="form-input" accept=".xlsx">
+            </div>
+            
+            <button id="getStartedBtn" class="submit-btn">Get Started</button>
+        </div>
+    </div>
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="start.js"></script>
+</body>
+</html>

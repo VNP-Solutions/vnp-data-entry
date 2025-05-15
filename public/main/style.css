@@ -1,0 +1,439 @@
+:root {
+    --primary-blue: #1e3a8a;
+    --light-blue: #2a4cad;
+    --gold: #f0c14b;
+    --white: #ffffff;
+    --light-gray: #f8f8f8;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #666666;
+    --black: #333333;
+    --border-radius: 12px;
+    --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: var(--black);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    width: 140px;
+    height: 50px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.welcome-user {
+    font-size: 16px;
+    color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+}
+
+.welcome-user .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--light-gray);
+}
+
+.entry-counter {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-btn:hover {
+    background-color: var(--light-gray);
+}
+
+.nav-btn.next {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+}
+
+.nav-btn.next:hover {
+    background-color: var(--light-blue);
+}
+
+.nav-btn.download {
+    background-color: var(--white);
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+}
+
+.nav-btn.download:hover {
+    background-color: rgba(30, 58, 138, 0.05);
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    background-color: var(--white);
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--medium-gray);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.info-label {
+    font-size: 14px;
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 14px;
+    color: var(--black);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copy-icon {
+    color: var(--primary-blue);
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.copy-icon:hover {
+    opacity: 1;
+}
+
+.status-section {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.status-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--medium-gray);
+    height: 100%;
+}
+
+.status-header {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary-blue);
+}
+
+.status-dropdown {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--medium-gray);
+    background-color: var(--white);
+    font-size: 14px;
+    color: var(--black);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e3a8a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+.status-dropdown:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.status-dropdown option {
+    padding: 10px;
+}
+
+.card-view-section {
+    /* padding: 30px; */
+    /* background-color: var(--light-gray); */
+    /* border-top: 1px solid var(--medium-gray); */
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--dark-gray);
+}
+
+.credit-card {
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+    border-radius: 16px;
+    padding: 25px;
+    color: var(--white);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.credit-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.credit-card::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.card-number {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card-holder {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-holder-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.card-amount {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-top: 8px;
+}
+
+.card-expires {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-expires-date {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.card-chip {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 40px;
+}
+
+.card-brand {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.highlight {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .status-section {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .welcome-user {
+        margin-top: 10px;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .credit-card {
+        max-width: 100%;
+    }
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toast {
+    background-color: #333; /* Dark background for the toast */
+    color: #fff; /* White text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    transition: opacity 0.5s ease;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s forwards; /* Fade in and out animations */
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
